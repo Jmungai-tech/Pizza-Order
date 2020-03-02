@@ -1,4 +1,7 @@
-h
+html,
+body {
+	min-height: 100%;
+}
 
 body {
 	background: url('../img/background.jpg') no-repeat 0 0;
