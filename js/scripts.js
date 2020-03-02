@@ -64,7 +64,7 @@ function get_order_html(pizzas, delivery, show_delete) {
     }
 
     // Add GST
-    order_html += '<tr><th>GST</th><th>$' + (total * 3 / 23).toFixed(2) + '</th></tr>';
+    order_html += '<tr><th>VAT</th><th>$' + (total * 3 / 23).toFixed(2) + '</th></tr>';
 
     // Add price total
     order_html += '<tr><th>Total</th><th>$' + total + '</th></tr>';
