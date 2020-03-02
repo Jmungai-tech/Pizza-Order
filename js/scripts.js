@@ -6,17 +6,17 @@ var delivery_price = 3.00;
 
 var pizzas = [
   {name: 'Supermisso', price: 8.50, image: 'pizza-1.png'},
-  {name: 'Replica', price: 8.50, image: 'pizza-2.png'},
-  {name: 'Hawaii', price: 8.50, image: 'pizza-3.png'},
-  {name: 'Tropical', price: 8.50, image: 'pizza-4.png'},
-  {name: 'Chicken Mushroom', price: 8.50, image: 'pizza-1.png'},
-  {name: 'Peporroni', price: 8.50, image: 'pizza-2.png'},
-  {name: 'Bacon meat', price: 8.50, image: 'pizza-3.png'},
-  {name: 'Chilli pizza', price: 13.50, image: 'pizza-4.png'},
-  {name: 'Mentos', price: 13.50, image: 'pizza-1.png'},
-  {name: 'Lemoned', price: 13.50, image: 'pizza-2.png'},
-  {name: 'Leggos', price: 13.50, image: 'pizza-3.png'},
-  {name: 'Chicken tica', price: 13.50, image: 'pizza-4.png'}
+  {name: 'Peperri', price: 8.50, image: 'pizza-2.png'},
+  {name: 'Chicken Mushroom', price: 8.50, image: 'pizza-3.png'},
+  {name: 'Italic', price: 8.50, image: 'pizza-4.png'},
+  {name: 'Rowmac', price: 8.50, image: 'pizza-1.png'},
+  {name: 'Trivago', price: 8.50, image: 'pizza-2.png'},
+  {name: 'LEGGOS', price: 8.50, image: 'pizza-3.png'},
+  {name: 'Hawaii', price: 13.50, image: 'pizza-4.png'},
+  {name: 'Hams', price: 13.50, image: 'pizza-1.png'},
+  {name: 'Bacon meat', price: 13.50, image: 'pizza-2.png'},
+  {name: 'LEMON PIE', price: 13.50, image: 'pizza-3.png'},
+  {name: 'TRIVAGOS', price: 13.50, image: 'pizza-4.png'}
 ];
 
 
@@ -64,7 +64,7 @@ function get_order_html(pizzas, delivery, show_delete) {
     }
 
     // Add GST
-    order_html += '<tr><th>Forced tips</th><th>$' + (total * 3 / 23).toFixed(2) + '</th></tr>';
+    order_html += '<tr><th>GST</th><th>$' + (total * 3 / 23).toFixed(2) + '</th></tr>';
 
     // Add price total
     order_html += '<tr><th>Total</th><th>$' + total + '</th></tr>';
