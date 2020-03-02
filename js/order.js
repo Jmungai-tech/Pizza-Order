@@ -1,6 +1,5 @@
 // Address auto-completion.
 $(function() {
-  var widget = new AddressFinder.Widget(document.getElementById("address"), "KVYHNX7CTUGWEQDBL4M6");
 });
 
 $(function() {
@@ -13,13 +12,13 @@ $(function() {
     $('#pizzas').append('<div class="col-xs-6 col-md-4 pizza"><a href="#" title="Add to Order" class="thumbnail"><img src="img/' + pizza.image + '" alt=""><div class="caption text-center"><span class="name">' +  (i + 1) + '. ' + pizza.name + '</span> <kbd class="price">$' + pizza.price.toFixed(2) + '</kbd></div></a></div>');
   }
 
-  function draw_order(pizzas) {
+  function draw_order() {
     order_html = get_order_html(order, $('#method_delivery').is(':checked'), true);
 
     $('#order').html(order_html);
 
     // Remove button
-    $('#order button').on('click', function(e){
+    $('#order button').on('click', function(){
       var i = parseFloat($(this).closest('tr').attr('id'));
       order.splice(i, 1);
       draw_order();
@@ -42,7 +41,7 @@ $(function() {
   $('input[type=radio]').on('click', draw_order);
 
   $('.delivery-only').hide();
-  $('input[type=radio').on('click', function(e) {
+  $('input[type=radio').on('click', function() {
     if ($('#method_delivery').is(':checked')) {
       $('.delivery-only').slideDown('fast');
     }
@@ -54,7 +53,7 @@ $(function() {
   draw_order();
 
   // Place the order
-  $('form').on('submit', function(e){
+  $('form').on('submit', function(){
     save_order();
   });
 });
