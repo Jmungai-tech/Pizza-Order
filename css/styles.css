@@ -1,8 +1,9 @@
-
+html,
 body {
-	background: url('../img/background.jpg') no-repeat 0 0;
-	background-size: cover;
+	min-height: 100%;
 }
+
+
 
 .jumbotron,
 .panel {
